@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "book-review-api",
+		"name": "Book Review API - All Tasks",
+		"description": "Complete collection for testing all 13 tasks of the Book Review Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "General Users (Tasks 1-5)",
+			"item": [
+				{
+					"name": "Task 1 - Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": [""]
+						}
+					}
+				},
+				{
+					"name": "Task 2 - Get Book by ISBN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/isbn/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["isbn", "1"]
+						}
+					}
+				},
+				{
+					"name": "Task 3 - Get Books by Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/author/Jane Austen",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["author", "Jane Austen"]
+						}
+					}
+				},
+				{
+					"name": "Task 4 - Get Books by Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/title/Pride and Prejudice",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["title", "Pride and Prejudice"]
+						}
+					}
+				},
+				{
+					"name": "Task 5 - Get Book Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/review/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["review", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Authentication (Tasks 6-7)",
+			"item": [
+				{
+					"name": "Task 6 - Register New User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/register",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["register"]
+						}
+					}
+				},
+				{
+					"name": "Task 7 - Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/customer/login",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["customer", "login"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Registered Users (Tasks 8-9)",
+			"item": [
+				{
+					"name": "Task 8 - Add/Modify Review",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customer/auth/review/1?review=This is an excellent book!",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["customer", "auth", "review", "1"],
+							"query": [
+								{
+									"key": "review",
+									"value": "This is an excellent book!"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Task 9 - Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customer/auth/review/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["customer", "auth", "review", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Async/Promises (Tasks 10-13)",
+			"item": [
+				{
+					"name": "Task 10 - Async Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/async/books",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["async", "books"]
+						}
+					}
+				},
+				{
+					"name": "Task 11 - Promise Search by ISBN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/async/isbn/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["async", "isbn", "1"]
+						}
+					}
+				},
+				{
+					"name": "Task 12 - Async Search by Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/async/author/Jane Austen",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["async", "author", "Jane Austen"]
+						}
+					}
+				},
+				{
+					"name": "Task 13 - Async Search by Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/async/title/Pride and Prejudice",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["async", "title", "Pride and Prejudice"]
+						}
+					}
+				}
+			]
+		}
+	]
+}
